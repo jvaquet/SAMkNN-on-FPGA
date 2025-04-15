@@ -1,0 +1,27 @@
+/include/ "system-conf.dtsi"
+/ {
+    // Restrict the memory available to the kernel to the first 512MB
+    memory {
+        device_type = "memory";
+        reg = <0x00000000 0x20000000>;
+    };
+
+    // Create a new memory region (shm) for the FPGA design, starting at address 0x20000000 with a size of 512MB.
+    // The name of the region is shm0 and it can be accessed using the UIO driver.
+    shm: shm0@20000000 {
+        compatible = "generic-uio";
+        reg = <0x20000000 0x20000000>;
+    };
+};
+
+&ddr2stream_0 {
+    compatible = "generic-uio";
+};
+
+&ddr2stream_1 {
+    compatible = "generic-uio";
+};
+
+&stream2ddr_0 {
+    compatible = "generic-uio";
+};
