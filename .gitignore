@@ -1,0 +1,34 @@
+## Vitis generated files
+vitis_hls.log
+implementation/hls/ddr2stream/ddr2stream
+implementation/hls/stream2ddr/stream2ddr
+implementation/hls/samknn/samknn
+
+## Genereated IP cores
+implementation/vivado/ip_repo
+
+## Vivado generated files
+implementation/vivado/samknn/*
+!implementation/vivado/samknn/export_hardware.tcl
+!implementation/vivado/samknn/make_wrapper.tcl
+!implementation/vivado/samknn/samknn.xpr
+!implementation/vivado/samknn/samknn.srcs
+
+## Host code
+implementation/host/CLAP
+implementation/host/samknn/build
+
+## Log files
+implementation/logs
+
+## Dataset files
+evaluation/driftDatasets
+evaluation/datasets
+
+## Artifacts
+artifacts
+
+## Evaluation files
+evaluation/experiments/SAMkNN
+evaluation/configs
+evaluation/results
